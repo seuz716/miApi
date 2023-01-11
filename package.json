@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemo app.js"
+    "start": "nodemon app.js"
   },
   "author": "cesar andres abadia",
   "license": "ISC",
