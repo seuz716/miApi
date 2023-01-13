@@ -1,27 +1,31 @@
  /* IMPORTAR MODULOS */
 
-const { response } = require('express');
-const express = require('express');
+
+const  express = require('express')
+ /* 
+ req (solicitud) y res (respuesta) son exactamente los mismos objetos que proporciona Node, 
+ por lo que puede invocar req.pipe(), req.on('data', callback) y cualquier otro objeto que 
+ invocaría sin estar Express implicado. */
 
 /*  CONFIGURACION DE MODULOS */
+
 const app = express();
-const port = 3500;
+const port = 3600;
 
 
 // INICIALIZACION DE RUTAS
 
-app.get("/prueba", function (req, res) {
+app.get("/hola", function (req, res) {
+  res.send('GET request to homepage')
+})
 
-    // PROCESAMIENTO DE PETICIONES
-    let nombre = "Cesar Abadia"
-    // ENVIO DE RESPUESTAS
-    response.send(nombre);
-    
-} )
+app.get("/suave", function (req, res) {
+  res.send('GET request to homepage')
+})
 
 
 //CORRER EL SERVIDOR
 
 app.listen(port,function () {
-    console.log("api ejecutandose en el pueto "+ port);
+    console.log("api ejecutandose en el puerto "+ port);
 })
